@@ -29,6 +29,11 @@ app.get('/rooms', (req, res) => {
     res.json(rooms)
 })
 
+app.get("/",(req,res) =>{
+    res.json("Server is connected");
+})
+
+
 //function to message from room 
 async function getLastMessagesFromRoom(room){
     let roomMessages = await Message.aggregate([
